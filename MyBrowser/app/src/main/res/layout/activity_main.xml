@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context="com.example.asus.mybrowser.MainActivity">
+
+
+    <Button
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+
+        android:background="@null"
+
+        android:drawableRight="@drawable/fresh"
+
+
+        android:layout_alignBottom="@+id/edit_text"
+        android:layout_alignRight="@+id/edit_text"
+        android:layout_alignEnd="@+id/edit_text"
+        android:layout_marginTop="8dp"
+        />
+
+    <EditText
+        android:id = "@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="主页"
+        android:selectAllOnFocus="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@null"
+        android:layout_marginTop="15dp"
+        android:maxLines="2"
+         />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max = "100"
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_marginTop="40dp"
+        android:visibility="visible"/>
+
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/edit_text"
+        android:layout_above="@+id/button_origin">
+        <WebView
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/edit_text"
+            android:layout_above="@+id/button_origin">
+         </WebView>
+     </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <FrameLayout
+        android:id = "@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#88000000"
+        android:layout_alignTop="@+id/swipe_container"
+        android:layout_alignBottom="@+id/listView3">
+
+    </FrameLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/back"
+        android:background="@drawable/selector"
+        android:id="@+id/button_back"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/forward"
+        android:id="@+id/button_forward"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="85dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/selector"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/origin"
+        android:id="@+id/button_origin"
+        android:background="@drawable/selector"
+        android:layout_alignParentBottom="true"
+
+
+        android:layout_marginLeft="155dp"
+        android:layout_marginRight="5dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/label"
+        android:id="@+id/button_label"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="225dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/selector"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_setting"
+        android:drawableRight="@drawable/setting"
+
+        android:layout_alignTop="@+id/button_label"
+        android:layout_marginLeft="295dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/selector"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EditText2"
+        android:layout_below="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="250dp"
+        android:hint="请输入"
+        android:maxLines="2"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+
+        android:text="搜索"
+        android:textAlignment="textEnd"
+        android:background="@null"
+
+        android:layout_alignBottom="@+id/EditText2"
+        android:layout_alignRight="@+id/EditText2"
+        android:layout_alignEnd="@+id/EditText2"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text = "Hello World"
+        android:id="@+id/textView"
+        android:textIsSelectable="false"
+        android:textSize="30dp"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:background="#ffffff"
+        android:cacheColorHint="#00000000"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:smoothScrollbar="true"
+        android:layout_above="@+id/button_back" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:id="@+id/listView2"
+        android:background="#ffffff"
+        android:layout_alignBottom="@+id/swipe_container"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_alignLeft="@+id/button_label"
+        android:layout_alignStart="@+id/button_label" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView3"
+
+        android:layout_above="@+id/button_back"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/edit_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="空空如也~~~"
+        android:textSize="30dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:clickable="false" />
+
+
+
+
+
+
+</RelativeLayout>

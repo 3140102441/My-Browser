@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#FF21272B"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <item android:state_pressed="true">
+        <shape>
+            <gradient android:startColor="#727171" />
+
+        </shape>
+    </item>
+    <item android:state_focused="true">//定义当button获得 focus时的形态
+        <shape>
+            <gradient android:startColor="#727171"/>
+
+        </shape>
+    </item>
+    <item android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <shape android:shape="rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <solid android:color="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <corners android:radius="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </shape>
+    </item>
+    <item android:drawable="@layout/rounded_corners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</ripple>
